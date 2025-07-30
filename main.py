@@ -174,7 +174,6 @@ if __name__ == "__main__":
                 inp = hist.read()
                 hist.close()
                 inp += "\n" # auto return
-                # print(inp.replace("\n", "\n... "))
 
             except Exception as exception:
                 print("cannot open path:", __REPL_load_history__)
@@ -216,7 +215,6 @@ if __name__ == "__main__":
         while len(collected) > 0 and collected[0] == "\n":
             collected = collected[1:] # remove first character if is \n
 
-        # print(parse(collected))
         inp = "\n".join(lines) # used for history management so you can store blocks
         if is_ogre(collected) > 64:
             collected = "raise OverflowError('System is Overwhelmed by Ogreish Fury')"
